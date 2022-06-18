@@ -7,19 +7,5 @@ TABULATION SOLUTION-->
 
 recurrence for this solution-->
 
-int solution(int i,int target,vector<int> &num,vector<vector<int>> &dp){
-    if(target==0){
-        return 1;
-    }
-  if(i==0){
-      if(target==num[i]) return 1;
-      else return 0;
-  } 
-    if(dp[i][target]!=-1) return dp[i][target];
-    int l=0,r=0;
-    l=solution(i-1,target,num,dp);
-    if(target>=num[i])
-    r=solution(i-1,target-num[i],num,dp);
-    
-    return dp[i][target]= l+r;
-}
+![image](https://user-images.githubusercontent.com/102652030/174425903-1c6a30b5-f7ef-4453-9af1-d2855bb458ff.png)
+
